@@ -1,0 +1,27 @@
+---
+layout: default
+title: "Home"
+---
+<div class="introduction">
+
+<p>This site is a full bibliographic index and digital repository for Sheldon Pollock, Arvind Raghunathan Professor of South Asian Studies, at Columbia University. It is built according to minimal computing standards to make it durable and broadly accessible. You can also download the complete bibliography as <a href="{{ site.baseurl }}/archive/complete.bib" target="_blank">a bibTex file</a>, or browse as <a href="https://www.zotero.org/elotroalex/items/collectionKey/FXCKMBBN">a Zotero collection</a>.</p>
+</div>
+
+<hr>
+
+<div class="toc">
+  <h2>Categories</h2>
+  <ul class="texts">
+  {% for item in site.texts %}
+  
+    <li class="text-title">
+      <a href="{{ site.baseurl }}{{ item.url }}">
+        {{ item.title }}
+      </a>
+    </li>
+  {% endfor %}
+  </ul>
+</div>
+
+
+

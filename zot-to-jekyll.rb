@@ -6,22 +6,22 @@ require 'fileutils'
 bib_file = './_bibliography/muisca.bib'
 pdf_dir = './archive/'
 
-
-# Open the bib file
+# Open the file
 
 b = BibTeX.open("#{bib_file}")
+
+# Move PDFs from subdirectories to main directory
+
+Dir.glob("#{pdf_dir}/**/*.pdf") do |item|
+  FileUtils.mv item, "#{pdf_dir}"
+end
+
 
 # Correct bib keys
 
 b.each do |obj|
 	obj.key.sub!(':', '')
 	# puts obj.key
-end
-
-# Move PDFs from subdirectories to main directory
-
-Dir.glob("#{pdf_dir}/**/*.pdf") do |item|
-  FileUtils.mv item, "#{pdf_dir}"
 end
 
 

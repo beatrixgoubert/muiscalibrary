@@ -2,13 +2,13 @@
 
 # Setup
 
-title: 'Sheldon I. Pollock.'
-tagline: 'a complete bibliography'
-description: "A complete bibliography and repository of Sheldon I. Pollock's scholarly work."
-url: 'http://elotroalex.github.io'
-baseurl: '/pollock-bibliography'
+title: 'Biblioteca Muisca.'
+tagline: 'Bibliografía y repositorio de literatura y investigación Muisca'
+description: "Bibliografía y repositorio de literatura y investigación Muisca"
+baseurl: '/muiscalibrary'
 
 # About/contact
+
 author:
   name:              Alex Gil
   url:               https://twitter.com/elotroalex

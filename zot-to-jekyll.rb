@@ -3,10 +3,11 @@ require 'fileutils'
 
 # Settings
 
-bib_file = './_bibliography/test.bib'
+bib_file = './_bibliography/muisca.bib'
 pdf_dir = './archive/'
 
-# Open the file
+
+# Open the bib file
 
 b = BibTeX.open("#{bib_file}")
 
@@ -15,6 +16,12 @@ b = BibTeX.open("#{bib_file}")
 b.each do |obj|
 	obj.key.sub!(':', '')
 	# puts obj.key
+end
+
+# Move PDFs from subdirectories to main directory
+
+Dir.glob("#{pdf_dir}/**/*.pdf") do |item|
+  FileUtils.mv item, "#{pdf_dir}"
 end
 
 
